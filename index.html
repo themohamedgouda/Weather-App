@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" type="image/x-icon" href="./portfolio/logo.png">
+    <title>Weather</title>
+</head>
+<body>
+<!-- Navbar with links to various sections of the weather app -->
+<nav class="navbar navbar-expand-lg py-4">
+    <div class="container">
+        <!-- Logo and brand name -->
+        <img src="./portfolio/logo.png" width="50" alt="">
+        <a class="ms-2 navbar-brand text-white fs-3 fw-bold" href="#">Weather</a>
+        <!-- Toggler button for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Navigation links -->
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item ">
+                    <a class="nav-link active text-info border border-2 border-info rounded-pill px-4 me-3" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link px-4 me-3" href="#">News</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link px-4 me-3" href="#">Live Cameras</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link px-4 me-3" href="#">Photos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-4 me-3" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Header with a search bar and weather cards -->
+<header class="d-flex align-items-center">
+    <div class="container">
+        <!-- Search bar for finding location -->
+        <div class="row">
+            <div class="col">
+                <div class="w-75 mx-auto">
+                    <input type="search" class="w-100 rounded-pill py-2 form-control" placeholder="Find Your Location..." id="searchLocation">
+                </div>
+            </div>
+        </div>
+        <!-- Weather cards for today, tomorrow, and the day after tomorrow -->
+        <div class="row g-0 mt-5">
+            <!-- Card for today's weather -->
+            <div class="col-md-4">
+                <div class="card text-bg-primary mb-3 border-0" style="height: 26rem;">
+                    <div class="card-header d-flex justify-content-between">
+                        <span id="weekDayName">Monday</span>
+                        <span id="dateToday">17 June</span>
+                    </div>
+                    <div class="card-body">
+                        <span id="yourLocation">Cairo</span>
+                        <h1 class="card-title my-3 text-center" id="tempToday">34.3oC</h1>
+                        <div class="text-center d-flex justify-content-center align-items-center">
+                            <span id="clearIcon"></span>
+                            <span class="text-info ps-1" id="natureOfDay">Clear</span>
+                        </div>
+                        <div class="row mt-3 text-center">
+                            <div class="col-4">
+                                <i class="fa-solid fa-umbrella pe-1"></i>
+                                <span id="humidityToday">20%</span>
+                            </div>
+                            <div class="col-4">
+                                <i class="fa-solid fa-gauge pe-1"></i>
+                                <span id="windSpeedToday">18km/h</span>
+                            </div>
+                            <div class="col-4">
+                                <i class="fa-solid fa-wand-sparkles pe-1"></i>
+                                <span id="dirToday">East</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card for tomorrow's weather -->
+            <div class="col-md-4">
+                <div class="card active-card text-bg-primary" style="height: 26rem;">
+                    <div class="card-header text-center" id="tomorrowday">Tuesday</div>
+                    <div class="card-body text-center py-5 d-flex flex-column justify-content-center">
+                        <span id="clearIconTomorrow"></span>
+                        <h2 class="py-3" id="maxTempTomorrow">40.4oC</h2>
+                        <span id="avgTempTomorrow">24.6o</span>
+                        <p class="text-info pt-2" id="natureofTempTomorrow">Sunny</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card for the day after tomorrow's weather -->
+            <div class="col-md-4">
+                <div class="card text-bg-primary" style="height: 26rem;">
+                    <div class="card-header text-center" id="afterTomorrowday">Tuesday</div>
+                    <div class="card-body text-center py-5 d-flex flex-column justify-content-center">
+                        <span id="afterClearIconTomorrow"></span>
+                        <h2 class="py-3" id="afterMaxTempTomorrow">40.4oC</h2>
+                        <span id="afterAvgTempTomorrow">24.6o</span>
+                        <p class="text-info pt-2" id="afterNatureofTempTomorrow">Sunny</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Footer with subscription form and social media links -->
+<footer class="py-4">
+    <div class="container">
+        <div class="parent d-flex justify-content-between align-content-center">
+            <!-- Email subscription form -->
+            <div class="w-75">
+                <form>
+                    <input type="email" class="w-100 rounded-pill py-2 form-control" placeholder="Enter Your Email Subscribe...">
+                </form>
+            </div>
+            <!-- Social media links -->
+            <div class="social-media w-25">
+                <ul class="list-unstyled d-flex justify-content-around m-0">
+                    <li class="bg-icon">
+                        <a href=""><i class="fa-brands fa-facebook fa-1x"></i></a>
+                    </li>
+                    <li class="bg-icon">
+                        <a href=""><i class="fa-brands fa-youtube fa-1x"></i></a>
+                    </li>
+                    <li class="bg-icon">
+                        <a href=""><i class="fa-brands fa-google fa-1x"></i></a>
+                    </li>
+                    <li class="bg-icon">
+                        <a href=""><i class="fa-brands fa-pinterest fa-1x"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Copyright information -->
+        <div>
+            <p class="text-secondary ms-1 mt-3">Copyright 2024 Company name. Designed by M.Gouda All rights reserved</p>
+        </div>
+    </div>
+</footer>
+    <script src="./js/index.js"></script>
+</body>
+</html>

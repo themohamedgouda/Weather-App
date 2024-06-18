@@ -1,0 +1,84 @@
+:root {
+    --mainColor: #1e202b;
+    --secondColor: rgb(13 202 240);
+    --thirdColor: #262936;
+}
+
+/* Navbar styling */
+nav {
+    background-color: var(--mainColor);
+}
+
+nav .nav-link {
+    color: white;
+    font-size: 1.1rem;
+}
+
+nav .nav-link:hover {
+    border: 2px solid var(--secondColor);
+    border-radius: 50rem;
+    color: var(--secondColor);
+}
+
+/* Header background styling */
+header {
+    background-image: url(../portfolio/banner.png), linear-gradient(var(--mainColor), var(--mainColor));
+    background-repeat: no-repeat;
+    min-height: 70vh;
+}
+
+/* Footer styling */
+footer {
+    background-color: var(--mainColor);
+    min-height: 19.1vh;
+}
+
+/* Social media icon styling */
+.social-media ul li.bg-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--thirdColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media ul li a {
+    text-decoration: none;
+    color: var(--secondColor);
+}
+
+.social-media ul li.bg-icon:hover {
+    background-color: var(--secondColor);
+}
+
+.social-media ul li.bg-icon:hover a {
+    color: white;
+}
+
+/* Input field styling */
+input {
+    background-color: var(--thirdColor) !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: white !important;
+    padding: 15px !important;
+}
+
+input::placeholder {
+    color: rgb(108 117 125) !important;
+}
+
+/* Card styling */
+.card {
+    background-color: var(--thirdColor) !important;
+}
+
+.active-card {
+    background-color: var(--mainColor) !important;
+}
+
+h1 {
+    font-size: 6rem;
+}
